@@ -62,7 +62,13 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query: inputText }),
+        body: JSON.stringify({ 
+          query: inputText,
+          messageHistory: messages.map(message => ({
+            text: message.text,
+            isUser: message.isUser
+          }))
+        }),
       });
 
       const data: ChatReplyResponse = await response.json();
