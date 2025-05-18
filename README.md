@@ -71,7 +71,7 @@ fe-looppanel/
 The application expects the following API endpoints to be available:
 
 - `GET /list_projects` - List all available projects
-- `POST /get_chat_reply/{project_id}` - Get AI response for a specific project
+- `POST /get_chat_reply/{project_id}` - Get AI response for a query asked in a project
 
 ## Development
 
